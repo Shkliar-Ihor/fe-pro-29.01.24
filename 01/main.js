@@ -20,7 +20,7 @@ userName = 'Bob';
 // userName = 23;
 
 //Number
-
+//Float - числа з плаваючою комою
 let numberValue = 100;
 let numberFloat = 0.33;
 //Nan - not a number
@@ -66,7 +66,23 @@ console.log(emptyValue);
 // alert(trueValue);
 //prompt - виводить діалогове вікно з інпутом та батном
 // prompt('Як ваш день?');
-let dayInfo = prompt('Як ваш день?', 'Пусте значення');
+// let dayInfo = prompt('Як ваш день?', 'Пусте значення');
+// console.log('DayInfo from prompt', dayInfo);
+
+let firstPrompt = prompt('Напишіть перше число');
+let secondPrompt = Number(prompt('Напишіть друге число'));
+let firstPromptNumber = parseFloat(firstPrompt);
+let summOperation = firstPromptNumber+secondPrompt;
+console.log(summOperation);
+// console.log(+firstPrompt+ +secondPrompt);
+
+// console.log(parseInt(object)); - трансформує значення до цілого числового значення
+// console.log(parseFloat(firstPrompt));
+
+// console.log(Number(object)); - автоматично визначає тип числа  
+// console.log(Number(firstPrompt));
+
+fe-pro-290124
 
 
-console.log('DayInfo from prompt', dayInfo);
+
