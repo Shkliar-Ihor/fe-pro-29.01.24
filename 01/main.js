@@ -20,7 +20,7 @@ userName = 'Bob';
 // userName = 23;
 
 //Number
-//Float - числа з плаваючою комою
+
 let numberValue = 100;
 let numberFloat = 0.33;
 //Nan - not a number
