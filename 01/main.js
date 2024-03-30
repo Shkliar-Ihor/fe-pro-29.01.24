@@ -69,6 +69,8 @@ console.log(emptyValue);
 // let dayInfo = prompt('Як ваш день?', 'Пусте значення');
 // console.log('DayInfo from prompt', dayInfo);
 
+//parseInt - тільки повні числа(без десятків)
+//parseFloat - повне число включаючи десятки
 let firstPrompt = prompt('Напишіть перше число');
 let secondPrompt = Number(prompt('Напишіть друге число'));
 let firstPromptNumber = parseFloat(firstPrompt);
