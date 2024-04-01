@@ -55,6 +55,7 @@ else{
 }
 //? роздільник if
 //: це else
+//let object = Object1 (якась умова) object2 ? 'object' : 'object'; - тернарний оператор
 maxValue = firstNumber>secondNumber ? firstNumber : secondNumber;
 console.log(maxValue);
 
