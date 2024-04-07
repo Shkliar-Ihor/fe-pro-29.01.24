@@ -88,7 +88,7 @@ spliceArr = spliceArr.splice(0,4);
 console.log(spliceArr);
 
 
-//reverse - розврото масиву
+//reverse - розврот масиву
 let startArr = ['First',2,3,4,5,'Last'];
 startArr.reverse();
 console.log(startArr);
