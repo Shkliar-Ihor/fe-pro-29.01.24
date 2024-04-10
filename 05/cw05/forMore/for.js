@@ -15,5 +15,5 @@ for(let letter of 'String'){
 let myObj = {user:'Tom', age:30};
 
 for(let key in myObj){
-    console.log(`key: ${key} value: ${myObj[key]}`);
+    console.log(`key: ${key}`);
 }
