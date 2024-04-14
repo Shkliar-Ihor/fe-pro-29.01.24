@@ -86,13 +86,14 @@
 // Після кожної спроби програма повідомляє, чи є загадане число більшим чи меншим від введеного. Гра триває до вгадування числа 
 
 let userGuess = prompt('Відгадайте число в діапазоні від 1 до 20');
+let randomValue = random();
 
 function random(){
     return Math.floor(Math.random()*20);
 }
 console.log(random());
 
-if(userGuess<Math.random() || userGuess>Math.random()){
+if(userGuess<randomValue || userGuess>randomValue){
     alert('Ви не вгадали число, спробуйте ще раз!');
 }
 else{
