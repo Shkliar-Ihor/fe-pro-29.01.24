@@ -69,39 +69,47 @@ window.onload = function(){
 
 // 3)Створіть в хедері з попереднього завдання А теги з значенням з обєкта name  встановленим значенням в href з url.
 
-    // menuData.setAttribute('a', 'url');
-    // let newLink = document.createElement('a');
-    // newLink.setAttribute('href', 'url');
-    // newLink.innerText = 'text';
-    // parent.after(newLink);
-    // console.log(menuData);
+let menuData = { name: 'https://example.com' };
+let parent = document.getElementById('menu');
+
+let NewLink = document.createElement('a');
+NewLink.setAttribute('href', menuData.name);
+NewLink.innerText = 'Link Text';
+parent.appendChild(NewLink);
+
+    let newLink = document.createElement('a');
+    newLink.setAttribute('href', menuData.name);
+    newLink.innerText = 'text';
+    parent.after(newLink);
+    console.log(menuData);
+    
 
     // 4)Створіть блок за допомогою js задайте блоку стиль display flex та в середині цього блоку створіть 50 div блоків з правилом border-radius, width 50px height 50px та background-color
 
-    let divBlock = document.querySelector('.block');
-    console.log(divBlock);
+//     let divBlock = document.querySelector('.block');
+//     console.log(divBlock);
 
-    divBlock.style.display = 'flex';
-    divBlock.style.flexWrap = 'wrap';
+//     divBlock.style.display = 'flex';
+//     divBlock.style.flexWrap = 'wrap';
 
-    let fragment = document.createDocumentFragment();
-    let amount = 50;
+//     let fragment = document.createDocumentFragment();
+//     let amount = 50;
     
-    for (let i = 1; i <= amount; i++){
-        let divEl = document.createElement('div');
-        divEl.innerHTML = '  name '+i  ;
-        divBlock.appendChild(divEl);
-        fragment.appendChild(divBlock);
+//     for (let i = 1; i <= amount; i++){
+//         let divEl = document.createElement('div');
+//         divEl.innerHTML = '  name '+i  ;
+//         divBlock.appendChild(divEl);
+//         fragment.appendChild(divBlock);
 
 
-        divEl.style.backgroundColor = 'orange';
-        divEl.style.borderRadius = '15px';
-        divEl.style.width = '50px';
-        divEl.style.height = '50px';
-        divEl.style.display = 'flex';
-        divEl.style.textAlign = 'center';
-   }
-    document.body.appendChild(fragment);
-    console.log(fragment);
+//         divEl.style.backgroundColor = 'orange';
+//         divEl.style.borderRadius = '15px';
+//         divEl.style.width = '50px';
+//         divEl.style.height = '50px';
+//         divEl.style.display = 'flex';
+//         divEl.style.textAlign = 'center';
+//    }
+//     document.body.appendChild(fragment);
+//     console.log(fragment);
 
 }
