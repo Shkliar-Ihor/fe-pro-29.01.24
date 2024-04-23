@@ -48,40 +48,49 @@ window.onload = function(){
 
 // 2)За допомогою js  створіть на сторінці елемент header  та задайте padding 50px та background-color жовтого кольору і властивість text-align center
 
-//  const menuData = [
-//     { name: 'Головна', url: '/' },
-//     { name: 'Про нас', url: '/about' },
-//     { name: 'Послуги', url: '/services' },
-//     // Додайте ще пункти меню за потреби
-// ];
+ const menuData = [
+    { name: 'Головна', url: '/' },
+    { name: 'Про нас', url: '/about' },
+    { name: 'Послуги', url: '/services' },
+    // Додайте ще пункти меню за потреби
+];
+let menuContainer = document.getElementById('menu');
 
-// let bodyEl = document.querySelector('body');
+for (let i = 0; i < menuData.length; i++) {
+    let menuItem = menuData[i];
+    let newLink = document.createElement('a');
+    newLink.setAttribute('href', menuItem.url);
+    newLink.innerText = menuItem.name;
+    menuContainer.appendChild(newLink);
+}
 
-// let headerTitle = document.createElement('header');
-// headerTitle.innerHTML = 'Hello JS'; 
+let bodyEl = document.querySelector('body');
 
-// bodyEl.appendChild(headerTitle);
+let headerTitle = document.createElement('header');
+headerTitle.innerHTML = 'Hello JS'; 
 
-// headerTitle.style.padding = '50px';                                         
-// headerTitle.style.backgroundColor='yellow';
-// headerTitle.style.textAlign = 'center';
+bodyEl.appendChild(headerTitle);
+
+headerTitle.style.padding = '50px';                                         
+headerTitle.style.backgroundColor='yellow';
+headerTitle.style.textAlign = 'center';
 
 
 // 3)Створіть в хедері з попереднього завдання А теги з значенням з обєкта name  встановленим значенням в href з url.
 
-let menuData = { name: 'https://example.com' };
-let parent = document.getElementById('menu');
+// let menuData = { name: 'https://example.com' };
+// let parent = document.getElementById('menu');
 
-let NewLink = document.createElement('a');
-NewLink.setAttribute('href', menuData.name);
-NewLink.innerText = 'Link Text';
-parent.appendChild(NewLink);
+// let NewLink = document.createElement('a');
+// NewLink.setAttribute('href', menuData.name);
+// NewLink.innerText = 'Link Text';
+// parent.appendChild(NewLink);
 
-    let newLink = document.createElement('a');
-    newLink.setAttribute('href', menuData.name);
-    newLink.innerText = 'text';
-    parent.after(newLink);
-    console.log(menuData);
+//     let newLink = document.createElement('a');
+//     newLink.setAttribute('href', menuData.name);
+//     newLink.innerText = 'text';
+//     parent.after(newLink);
+//     console.log(menuData);
     
 
     // 4)Створіть блок за допомогою js задайте блоку стиль display flex та в середині цього блоку створіть 50 div блоків з правилом border-radius, width 50px height 50px та background-color
