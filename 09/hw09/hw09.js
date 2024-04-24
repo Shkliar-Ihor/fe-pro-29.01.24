@@ -40,26 +40,29 @@ window.onload = function(){
 // Створити кнопку і текстовий елемент в якому розмість лічільник: 0,при кліку на кнопку в текстовому значенні повино збільшуватись значення на 1.
 // Коли значення лічильника перевищує 10, кнопка перестає реагувати на кліки.
 
-    // let eListner = document.querySelector('.listener');
-    // let text = document.querySelector('.text');
-    // let count = 0;
-    // eListner.addEventListener('click', function(){
-    //     count+=1;
-    //     if(count >10){
-    //         buttonEl.removeEventListener('click');
-    //         }
-    //     text.innerHTML = `Counter <strong>${count}</strong>`;
-    // });
+let buttonEl = document.querySelector('.listener');
+let text = document.querySelector('.text');
+let count = 0;
+
+function handleClick() {
+    count += 1;
+    if (count >= 10) {
+        buttonEl.removeEventListener('click', handleClick);
+    }
+    text.innerHTML = `Counter <strong>${count}</strong>`;
+}
+
+buttonEl.addEventListener('click', handleClick);
 
 
 // 4. Створіть веб-сторінку з кнопкою та 10 елементами (наприклад, div). Підключіть обробник події onclick до кожного елементу.
 // Коли користувач натисне на елемент,цей елемент має бути видалений зі сторінки
 
-    let delBtn = document.querySelector('.deleteBtn');
-    let divs = document.querySelector('.page div');
-    let elements = document.querySelector('.page');
+    // let delBtn = document.querySelector('.deleteBtn');
+    // let divs = document.querySelector('.page div');
+    // let elements = document.querySelector('.page');
 
-    delBtn.addEventListener('click', function(){
-        elements.firstElementChild.remove();
-    });
+    // delBtn.addEventListener('click', function(){
+    //     elements.firstElementChild.remove();
+    // });
 }
